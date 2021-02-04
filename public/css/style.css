@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+:root {
+    --initial-margin: 25mm;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background: #efeae1;
+    padding: 1em;
+}
+
+.document-info {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 210mm;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 1em;
+}
+
+.document-info * {
+    margin: auto 0;
+}
+
+.document-name {
+    width: 50%;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+}
+
+.sheet {
+    margin: 1em auto 0 auto;
+    position: relative;
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.4);
+}
+
+.margin-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--initial-margin);
+}
+
+.margin-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--initial-margin);
+    height: 100%;
+}
+
+.margin-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--initial-margin);
+}
+
+.margin-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--initial-margin);
+    height: 100%;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: lightgray;
+    z-index: 1;
+}
+
+.adjust-band {
+    display: none;
+    position: absolute;
+    background: rgb(20, 5, 48);
+}
+
+.top {
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+}
+
+.right {
+    left: 0;
+    width: 3px;
+    height: 100%;
+}
+
+.bottom {
+    top: 0;
+    width: 100%;
+    height: 3px;
+}
+
+.left {
+    right: 0;
+    width: 3px;
+    height: 100%;
+}
+
+.adjust-band.top:hover, .adjust-band.bottom:hover {
+    cursor: row-resize;
+}
+
+.adjust-band.left:hover, .adjust-band.right:hover {
+    cursor: col-resize;
+}
+
+.margin-top:hover, .margin-right:hover, .margin-bottom:hover, .margin-left:hover {
+    transition: all .2s;
+    background: rgba(62, 102, 235, .8);
+}
+
+.margin-top:hover *, .margin-right:hover *, .margin-bottom:hover *, .margin-left:hover * {
+    transition: all .1s;
+    display: block;
+}
+
+.content {
+    position: absolute;
+    top: 25mm;
+    left: 25mm;
+    width: 40%;
+    height: 80%;
+    max-width: 80%;
+    display: block;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
+
+.toolbox {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 30%;
+    height: 10%;
+    background: gray;
+    border-radius: 5px;
+    opacity: .2;
+}
+
+.toolbox:hover {
+    transition: all .3s;
+    opacity: 1;
+}
+

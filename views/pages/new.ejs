@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Untitled document</title>
+    </head>
+    <body>
+        <div class="document-info">
+            <input type="text" class="document-name" placeholder="Document name">
+            <p>Last save:</p>
+        </div>
+    
+        <div class="sheet">
+            <div class="margin-top">
+                <span class="info">25 mm</span>
+                <div class="adjust-band top" id="adjust-band-top"></div>
+            </div>
+            <div class="margin-right">
+                <span class="info">25 mm</span>
+                <div class="adjust-band right" id="adjust-band-right"></div>
+            </div>
+            <div class="margin-bottom">
+                <span class="info">25 mm</span>
+                <div class="adjust-band bottom" id="adjust-band-bottom"></div>
+            </div>
+            <div class="margin-left">
+                <span class="info">25 mm</span>
+                <div class="adjust-band left" id="adjust-band-left"></div>
+            </div>
+            <textarea class="content"
+                name="content" 
+                id="content" 
+                cols="1" 
+                rows="1"
+                autofocus
+                placeholder="Text...">
+            </textarea>
+        </div>
+
+        <script src="/js/action.js"></script>
+    </body>
+</html>
